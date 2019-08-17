@@ -1,1 +1,1 @@
-/usr/bin/clang++  -g   CMakeFiles/test.dir/test/test.cpp.o CMakeFiles/test.dir/src/Shader.cpp.o CMakeFiles/test.dir/src/ShaderBuilder.cpp.o  -o ../bin/test /usr/lib/libGLEW.so -lglfw3 -lpthread -lX11 -lXxf86vm -lXrandr -ldl -lstdc++fs /usr/lib/libGLX.so /usr/lib/libOpenGL.so 
+/usr/bin/c++     CMakeFiles/test.dir/test/test.cpp.o  -o ../bin/test ../lib/libmodular-glsl.a.a -lstdc++fs 

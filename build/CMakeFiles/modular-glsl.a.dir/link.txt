@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libmodular-glsl.a.a  CMakeFiles/modular-glsl.a.dir/src/ShaderBuilder.cpp.o
+/usr/bin/ranlib ../lib/libmodular-glsl.a.a

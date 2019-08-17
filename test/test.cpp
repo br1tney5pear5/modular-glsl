@@ -10,15 +10,15 @@ TEST_CASE( "Include directories manipulation" ) {
     std::error_code ec;
 
     std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
-    first_file << "__module \"first\"\n";
+    first_file << "#module \"first\"\n";
     first_file.close();
 
     std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
-    second_file << "__module \"second\"\n";
+    second_file << "#module \"second\"\n";
     second_file.close();
 
     std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
-    third_file << "__module \"third\"\n";
+    third_file << "#module \"third\"\n";
     third_file.close();
 
     REQUIRE(builder.get_include_dirs_count() == 0);
@@ -79,15 +79,15 @@ TEST_CASE( "Modules manipulation" ) {
     builder.add_include_dir("../test/res/");
 
     std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
-    first_file << "__module \"first\"\n";
+    first_file << "#module \"first\"\n";
     first_file.close();
 
     std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
-    second_file << "__module \"second\"\n";
+    second_file << "#module \"second\"\n";
     second_file.close();
 
     std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
-    third_file << "__module \"third\"\n";
+    third_file << "#module \"third\"\n";
     third_file.close();
 
     REQUIRE(builder.get_modules_count() == 0);
@@ -193,11 +193,11 @@ TEST_CASE( "Modules manipulation" ) {
     SECTION("Ill-formed modules are not parsed") {
         REQUIRE(builder.get_modules_count() == 0);
         std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
-        first_file << "__eludom \"first\"\n"; // bad keyword
+        first_file << "#eludom \"first\"\n"; // bad keyword
         first_file.close();
 
         std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
-        third_file << "__module \"\"\n";  // no module name
+        third_file << "#module \"\"\n";  // no module name
         third_file.close();
 
         builder.add_module("first.glsl", ec);
@@ -224,19 +224,19 @@ TEST_CASE( "Building shader" ) {
 
         std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
         first_file <<
-            "__module \"first\"\n"
-            "__uses \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"first\"\n"
+            "#uses \"second\"\n"
+            "#uses \"third\"\n";
         first_file.close();
 
         std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
         second_file <<
-            "__module \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"second\"\n"
+            "#uses \"third\"\n";
         second_file.close();
 
         std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
-        third_file << "__module \"third\"\n";
+        third_file << "#module \"third\"\n";
         third_file.close();
 
         builder.add_modules({"first.glsl", "second.glsl", "third.glsl"});
@@ -262,21 +262,21 @@ TEST_CASE( "Building shader" ) {
 
         std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
         first_file <<
-            "__module \"first\"\n"
-            "__uses \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"first\"\n"
+            "#uses \"second\"\n"
+            "#uses \"third\"\n";
         first_file.close();
 
         std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
         second_file <<
-            "__module \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"second\"\n"
+            "#uses \"third\"\n";
         second_file.close();
 
         std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
         third_file <<
-            "__module \"third\"\n"
-            "__uses \"first\"\n";
+            "#module \"third\"\n"
+            "#uses \"first\"\n";
         third_file.close();
 
         builder.add_modules({"first.glsl", "second.glsl", "third.glsl"});
@@ -296,21 +296,21 @@ TEST_CASE( "Building shader" ) {
 
         std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
         first_file <<
-            "__module \"first\"\n"
-            "__uses \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"first\"\n"
+            "#uses \"second\"\n"
+            "#uses \"third\"\n";
         first_file.close();
 
         std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
         second_file <<
-            "__module \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"second\"\n"
+            "#uses \"third\"\n";
         second_file.close();
 
         std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
         third_file <<
-            "__module \"third\"\n"
-            "__uses \"fourth\"\n";
+            "#module \"third\"\n"
+            "#uses \"fourth\"\n";
         third_file.close();
 
         builder.add_modules({"first.glsl", "second.glsl", "third.glsl"});
@@ -330,16 +330,16 @@ TEST_CASE( "Building shader" ) {
 
         std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
         first_file <<
-            "__module \"first\"\n"
-            "__uses \"second\"\n";
+            "#module \"first\"\n"
+            "#uses \"second\"\n";
         first_file.close();
 
         std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
-        second_file << "__module \"second\"\n";
+        second_file << "#module \"second\"\n";
         second_file.close();
 
         std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
-        third_file << "__module \"third\"\n";
+        third_file << "#module \"third\"\n";
         third_file.close();
 
         builder.add_modules({"first.glsl", "second.glsl", "third.glsl"});
@@ -373,20 +373,20 @@ TEST_CASE( "Hot rebuild" ) {
 
         std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
         first_file <<
-            "__module \"first\"\n"
-            "__uses \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"first\"\n"
+            "#uses \"second\"\n"
+            "#uses \"third\"\n";
 
         first_file.close();
 
         std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
         second_file <<
-            "__module \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"second\"\n"
+            "#uses \"third\"\n";
         second_file.close();
 
         std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
-        third_file << "__module \"third\"\n";
+        third_file << "#module \"third\"\n";
         third_file.close();
 
         builder.add_modules({"first.glsl", "second.glsl", "third.glsl"});
@@ -427,19 +427,19 @@ TEST_CASE( "Hot rebuild" ) {
 
         std::ofstream first_file("../test/res/first.glsl", std::ios_base::trunc);
         first_file <<
-            "__module \"first\"\n"
-            "__uses \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"first\"\n"
+            "#uses \"second\"\n"
+            "#uses \"third\"\n";
         first_file.close();
 
         std::ofstream second_file("../test/res/second.glsl", std::ios_base::trunc);
         second_file <<
-            "__module \"second\"\n"
-            "__uses \"third\"\n";
+            "#module \"second\"\n"
+            "#uses \"third\"\n";
         second_file.close();
 
         std::ofstream third_file("../test/res/third.glsl", std::ios_base::trunc);
-        third_file << "__module \"third\"\n";
+        third_file << "#module \"third\"\n";
         third_file.close();
 
         builder.add_modules({"first.glsl", "second.glsl", "third.glsl"});

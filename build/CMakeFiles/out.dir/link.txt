@@ -1,1 +1,1 @@
-/usr/bin/clang++  -g   CMakeFiles/out.dir/src/main.cpp.o CMakeFiles/out.dir/src/Shader.cpp.o CMakeFiles/out.dir/src/ShaderBuilder.cpp.o  -o ../bin/out /usr/lib/libGLEW.so -lglfw3 -lpthread -lX11 -lXxf86vm -lXrandr -ldl -lstdc++fs /usr/lib/libGLX.so /usr/lib/libOpenGL.so 
+/usr/bin/c++  -g   CMakeFiles/out.dir/src/main.cpp.o CMakeFiles/out.dir/src/ShaderBuilder.cpp.o  -o ../bin/out /usr/lib/libGLEW.so -lglfw3 -lpthread -lX11 -lXxf86vm -lXrandr -ldl -lstdc++fs /usr/lib/libGLX.so /usr/lib/libOpenGL.so 

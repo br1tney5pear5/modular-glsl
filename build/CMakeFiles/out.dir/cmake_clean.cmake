@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/out.dir/src/main.cpp.o"
-  "CMakeFiles/out.dir/src/Shader.cpp.o"
   "CMakeFiles/out.dir/src/ShaderBuilder.cpp.o"
   "../bin/out.pdb"
   "../bin/out"

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /shared/projects/raytracer
+CMAKE_SOURCE_DIR = /shared/projects/modular-glsl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /shared/projects/raytracer/build
+CMAKE_BINARY_DIR = /shared/projects/modular-glsl/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/out.dir/depend.make
@@ -59,61 +59,46 @@ include CMakeFiles/out.dir/flags.make
 
 CMakeFiles/out.dir/src/main.cpp.o: CMakeFiles/out.dir/flags.make
 CMakeFiles/out.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/shared/projects/raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/out.dir/src/main.cpp.o"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/main.cpp.o -c /shared/projects/raytracer/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/out.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/main.cpp.o -c /shared/projects/modular-glsl/src/main.cpp
 
 CMakeFiles/out.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/src/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /shared/projects/raytracer/src/main.cpp > CMakeFiles/out.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /shared/projects/modular-glsl/src/main.cpp > CMakeFiles/out.dir/src/main.cpp.i
 
 CMakeFiles/out.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /shared/projects/raytracer/src/main.cpp -o CMakeFiles/out.dir/src/main.cpp.s
-
-CMakeFiles/out.dir/src/Shader.cpp.o: CMakeFiles/out.dir/flags.make
-CMakeFiles/out.dir/src/Shader.cpp.o: ../src/Shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/shared/projects/raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/out.dir/src/Shader.cpp.o"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/Shader.cpp.o -c /shared/projects/raytracer/src/Shader.cpp
-
-CMakeFiles/out.dir/src/Shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/src/Shader.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /shared/projects/raytracer/src/Shader.cpp > CMakeFiles/out.dir/src/Shader.cpp.i
-
-CMakeFiles/out.dir/src/Shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/Shader.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /shared/projects/raytracer/src/Shader.cpp -o CMakeFiles/out.dir/src/Shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /shared/projects/modular-glsl/src/main.cpp -o CMakeFiles/out.dir/src/main.cpp.s
 
 CMakeFiles/out.dir/src/ShaderBuilder.cpp.o: CMakeFiles/out.dir/flags.make
 CMakeFiles/out.dir/src/ShaderBuilder.cpp.o: ../src/ShaderBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/shared/projects/raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/out.dir/src/ShaderBuilder.cpp.o"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/ShaderBuilder.cpp.o -c /shared/projects/raytracer/src/ShaderBuilder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/out.dir/src/ShaderBuilder.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/out.dir/src/ShaderBuilder.cpp.o -c /shared/projects/modular-glsl/src/ShaderBuilder.cpp
 
 CMakeFiles/out.dir/src/ShaderBuilder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/src/ShaderBuilder.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /shared/projects/raytracer/src/ShaderBuilder.cpp > CMakeFiles/out.dir/src/ShaderBuilder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /shared/projects/modular-glsl/src/ShaderBuilder.cpp > CMakeFiles/out.dir/src/ShaderBuilder.cpp.i
 
 CMakeFiles/out.dir/src/ShaderBuilder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/src/ShaderBuilder.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /shared/projects/raytracer/src/ShaderBuilder.cpp -o CMakeFiles/out.dir/src/ShaderBuilder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /shared/projects/modular-glsl/src/ShaderBuilder.cpp -o CMakeFiles/out.dir/src/ShaderBuilder.cpp.s
 
 # Object files for target out
 out_OBJECTS = \
 "CMakeFiles/out.dir/src/main.cpp.o" \
-"CMakeFiles/out.dir/src/Shader.cpp.o" \
 "CMakeFiles/out.dir/src/ShaderBuilder.cpp.o"
 
 # External object files for target out
 out_EXTERNAL_OBJECTS =
 
 ../bin/out: CMakeFiles/out.dir/src/main.cpp.o
-../bin/out: CMakeFiles/out.dir/src/Shader.cpp.o
 ../bin/out: CMakeFiles/out.dir/src/ShaderBuilder.cpp.o
 ../bin/out: CMakeFiles/out.dir/build.make
 ../bin/out: /usr/lib/libGLEW.so
 ../bin/out: /usr/lib/libGLX.so
 ../bin/out: /usr/lib/libOpenGL.so
 ../bin/out: CMakeFiles/out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/shared/projects/raytracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/out"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +111,6 @@ CMakeFiles/out.dir/clean:
 .PHONY : CMakeFiles/out.dir/clean
 
 CMakeFiles/out.dir/depend:
-	cd /shared/projects/raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /shared/projects/raytracer /shared/projects/raytracer /shared/projects/raytracer/build /shared/projects/raytracer/build /shared/projects/raytracer/build/CMakeFiles/out.dir/DependInfo.cmake --color=$(COLOR)
+	cd /shared/projects/modular-glsl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /shared/projects/modular-glsl /shared/projects/modular-glsl /shared/projects/modular-glsl/build /shared/projects/modular-glsl/build /shared/projects/modular-glsl/build/CMakeFiles/out.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/out.dir/depend
 

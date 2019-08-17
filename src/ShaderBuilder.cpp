@@ -430,19 +430,19 @@ std::string ShaderBuilder::detect_name(std::string filename){
 
 /// Reads and parses shader module file
 ///
-/// Reads and parses directive starting with "__"
+/// Reads and parses directive starting with "#"
 /// Currenly it supports:
 ///
-/// __module "name"      - Specifies name of parsed module
+/// #module "name"      - Specifies name of parsed module
 ///                        Required.
 ///
-/// __type "shadertype"  - Specifies shader type,
+/// #type "shadertype"  - Specifies shader type,
 ///                        overwrites type file extension detected type.
 ///
-/// __uses "modulename"  - Declares module of given name
+/// #uses "modulename"  - Declares module of given name
 ///                        as dependency of module that is parsed/
 ///
-/// __include "filename" - With literally inserts contents of file with given
+/// #include "filename" - With literally inserts contents of file with given
 ///                        filename into parsed file. It ought to be used only internally.
 /// @param filename Name of the file to be parsed
 /// @return Shader module object
@@ -461,19 +461,19 @@ ShaderModule ShaderBuilder::parse(const std::string filename, std::error_code& e
 
 /// Parses shader module source
 ///
-/// Reads and parses directive starting with "__"
+/// Reads and parses directive starting with "#"
 /// Currenly it supports:
 ///
-/// __module "name"      - Specifies name of parsed module
+/// #module "name"      - Specifies name of parsed module
 ///                        Required.
 ///
-/// __type "shadertype"  - Specifies shader type,
+/// #type "shadertype"  - Specifies shader type,
 ///                        overwrites type file extension detected type.
 ///
-/// __uses "modulename"  - Declares module of given name
+/// #uses "modulename"  - Declares module of given name
 ///                        as dependency of module that is parsed/
 ///
-/// __include "filename" - With literally inserts contents of file with given
+/// #include "filename" - With literally inserts contents of file with given
 ///                        filename into parsed file. It ought to be used only internally.
 /// @param filename Name of the file to be parsed
 /// @param ec Error code
@@ -485,8 +485,10 @@ ShaderModule ShaderBuilder::parse(const fs::path source_path, std::error_code& e
     std::string output;
     ShaderModule module;
 
+#ifdef SHADER_BUILDER_HOT_REBUILD_SUPPORT
     module.path = source_path;
-    module.last_write_time = fs::last_write_time(module.path, ec);
+    // module.last_write_time = fs::last_write_time(module.path, ec);
+#endif
 
     if(ec) {last_ec = ec; return module;}
 
@@ -524,7 +526,7 @@ ShaderModule ShaderBuilder::parse(const fs::path source_path, std::error_code& e
 
 
 
-    std::regex preprocess_directive_regex("(?:\\n)?((?:__)[a-z_]+)(?:\\s+)(\".*?\")(?:\\s+)?",
+    std::regex preprocess_directive_regex("(?:\\n)?((?:\\#)[a-z_]+)(?:\\s+)(\".*?\")(?:\\s+)?",
                                         std::regex_constants::ECMAScript
                                         // std::regex_constants::multiline
                                         );
@@ -553,7 +555,7 @@ ShaderModule ShaderBuilder::parse(const fs::path source_path, std::error_code& e
         std::smatch match = *i;
         const std::string& keyword = match[1];
 
-        if(match.size() == 3 && keyword == "__include") {
+        if(match.size() == 3 && keyword == "#include") {
             std::string include_filename = match[2];
 
             if(remove_quotes(include_filename)) {
@@ -569,7 +571,7 @@ ShaderModule ShaderBuilder::parse(const fs::path source_path, std::error_code& e
                 parse_err(match.position(0), match[0],
                             "syntax error");
             }
-        } else if(match.size() == 3 && keyword == "__module") {
+        } else if(match.size() == 3 && keyword == "#module") {
             std::string module_name = match[2];
 
             module_keyword_hits++;
@@ -586,7 +588,7 @@ ShaderModule ShaderBuilder::parse(const fs::path source_path, std::error_code& e
                 parse_err(match.position(0), match[0],
                           "syntax error");
             }
-        } else if(match.size() == 3 && keyword == "__uses") {
+        } else if(match.size() == 3 && keyword == "#uses") {
             std::string used_module_name = match[2];
 
             if(remove_quotes(used_module_name)) {
@@ -595,7 +597,7 @@ ShaderModule ShaderBuilder::parse(const fs::path source_path, std::error_code& e
 
                 edit_at(match.position(0), match[0], "");
             }
-        } else if(match.size() == 3 && keyword == "__type") {
+        } else if(match.size() == 3 && keyword == "#type") {
             std::string module_type = match[2];
 
             type_keyword_hits++;

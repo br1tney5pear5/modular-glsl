@@ -1,3 +1,3 @@
-__module "first"
-__uses "second"
-__uses "third"
+#module "first"
+#uses "second"
+#uses "third"

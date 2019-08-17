@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblocal.a  CMakeFiles/local.dir/Shader.cpp.o CMakeFiles/local.dir/Ray.cpp.o CMakeFiles/local.dir/Sphere.cpp.o CMakeFiles/local.dir/Hitable.cpp.o
-/usr/bin/ranlib liblocal.a

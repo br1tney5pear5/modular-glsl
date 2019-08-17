@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /shared/projects/raytracer
+CMAKE_SOURCE_DIR = /shared/projects/modular-glsl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /shared/projects/raytracer/build
+CMAKE_BINARY_DIR = /shared/projects/modular-glsl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /shared/projects/raytracer/build/CMakeFiles /shared/projects/raytracer/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /shared/projects/modular-glsl/build/CMakeFiles /shared/projects/modular-glsl/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /shared/projects/raytracer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /shared/projects/modular-glsl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named out
+# Target rules for targets named modular-glsl.a
 
 # Build rule for target.
-out: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 out
-.PHONY : out
+modular-glsl.a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 modular-glsl.a
+.PHONY : modular-glsl.a
 
 # fast build rule for target.
-out/fast:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/build
-.PHONY : out/fast
+modular-glsl.a/fast:
+	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/build
+.PHONY : modular-glsl.a/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -136,44 +136,13 @@ test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-src/Shader.o: src/Shader.cpp.o
-
-.PHONY : src/Shader.o
-
-# target to build an object file
-src/Shader.cpp.o:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Shader.cpp.o
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Shader.cpp.o
-.PHONY : src/Shader.cpp.o
-
-src/Shader.i: src/Shader.cpp.i
-
-.PHONY : src/Shader.i
-
-# target to preprocess a source file
-src/Shader.cpp.i:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Shader.cpp.i
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Shader.cpp.i
-.PHONY : src/Shader.cpp.i
-
-src/Shader.s: src/Shader.cpp.s
-
-.PHONY : src/Shader.s
-
-# target to generate assembly for a file
-src/Shader.cpp.s:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/Shader.cpp.s
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Shader.cpp.s
-.PHONY : src/Shader.cpp.s
-
 src/ShaderBuilder.o: src/ShaderBuilder.cpp.o
 
 .PHONY : src/ShaderBuilder.o
 
 # target to build an object file
 src/ShaderBuilder.cpp.o:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ShaderBuilder.cpp.o
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ShaderBuilder.cpp.o
+	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/src/ShaderBuilder.cpp.o
 .PHONY : src/ShaderBuilder.cpp.o
 
 src/ShaderBuilder.i: src/ShaderBuilder.cpp.i
@@ -182,8 +151,7 @@ src/ShaderBuilder.i: src/ShaderBuilder.cpp.i
 
 # target to preprocess a source file
 src/ShaderBuilder.cpp.i:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ShaderBuilder.cpp.i
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ShaderBuilder.cpp.i
+	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/src/ShaderBuilder.cpp.i
 .PHONY : src/ShaderBuilder.cpp.i
 
 src/ShaderBuilder.s: src/ShaderBuilder.cpp.s
@@ -192,36 +160,8 @@ src/ShaderBuilder.s: src/ShaderBuilder.cpp.s
 
 # target to generate assembly for a file
 src/ShaderBuilder.cpp.s:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/ShaderBuilder.cpp.s
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/ShaderBuilder.cpp.s
+	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/src/ShaderBuilder.cpp.s
 .PHONY : src/ShaderBuilder.cpp.s
-
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
 
 test/test.o: test/test.cpp.o
 
@@ -258,17 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... out"
+	@echo "... modular-glsl.a"
 	@echo "... test"
-	@echo "... src/Shader.o"
-	@echo "... src/Shader.i"
-	@echo "... src/Shader.s"
 	@echo "... src/ShaderBuilder.o"
 	@echo "... src/ShaderBuilder.i"
 	@echo "... src/ShaderBuilder.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 	@echo "... test/test.o"
 	@echo "... test/test.i"
 	@echo "... test/test.s"

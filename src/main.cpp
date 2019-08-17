@@ -13,8 +13,6 @@
 #include <thread>
 
 #include "Shader.h"
-#include "Logger.h"
-#include "Logger.h"
 
 #include "ShaderBuilder.h"
 
@@ -25,7 +23,7 @@ void log(std::string str) {
 
 int main(){
     ShaderBuilder builder;
-    builder.add_include_dir("/shared/projects/raytracer/shaders/");
+    builder.add_include_dir("../shaders/");
 
     using namespace std::chrono_literals;
 
@@ -40,15 +38,19 @@ int main(){
 
 
     while(true) {
-        std::cout << "Checking for changes\n";
-
         std::this_thread::sleep_for(1.0s);
 
-        auto flag = builder.hot_rebuild("mainfrag", source);
+        builder.import_modules_from_file("glslmodules", ec);
 
-        // if(flag) {
-        //     std::cout << source;
-        // }
+        auto flag = builder.hot_rebuild("mainfrag", source, ec);
+        if(ec) {
+            std::cout << ec.message();
+        }
+
+        if(flag) {
+            std::cout << "change" << "\n";
+            std::cout << source;
+        }
     }
     return 0;
 }//main

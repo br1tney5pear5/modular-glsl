@@ -1,4 +1,4 @@
-/shared/projects/raytracer/build/CMakeFiles/rebuild_cache.dir
-/shared/projects/raytracer/build/CMakeFiles/edit_cache.dir
-/shared/projects/raytracer/build/CMakeFiles/out.dir
-/shared/projects/raytracer/build/CMakeFiles/test.dir
+/shared/projects/modular-glsl/build/CMakeFiles/rebuild_cache.dir
+/shared/projects/modular-glsl/build/CMakeFiles/edit_cache.dir
+/shared/projects/modular-glsl/build/CMakeFiles/modular-glsl.a.dir
+/shared/projects/modular-glsl/build/CMakeFiles/test.dir
