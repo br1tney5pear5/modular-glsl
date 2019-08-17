@@ -124,7 +124,7 @@ Of course both vertex and fragment shader (or any other) can share the same modu
 ShaderBuilder includes function called hot_rebuild which takes root module name and reference to output string as parameters and monitors all modules for changes. It returns whether or not your shader any module changed. If it is the case, you should find newly rebuilt shader in string you passed as output. Here is a implementation of a simple watcher that can be used with glslViewer or any ShaderToy-like viewing tool. 
 ```c++
 // watcher.cpp - can be found in ./examples/watcher/
-#include "ShaderBuilder.h"
+#include "modular-glsl.h"
 #include <thread>
 #include <fstream>
 

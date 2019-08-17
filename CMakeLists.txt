@@ -13,13 +13,13 @@ set(LOCAL_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src)
 add_compile_options(-Wall -Wextra -Wpedantic -g)
 
 configure_file(
-  ${CMAKE_SOURCE_DIR}/src/ShaderBuilder.h
+  ${CMAKE_SOURCE_DIR}/src/modular-glsl.h
   ${CMAKE_SOURCE_DIR}/include/
   COPYONLY)
 
 add_library(modular-glsl STATIC
-  ${CMAKE_SOURCE_DIR}/src/ShaderBuilder.h
-  ${CMAKE_SOURCE_DIR}/src/ShaderBuilder.cpp
+  ${CMAKE_SOURCE_DIR}/src/modular-glsl.h
+  ${CMAKE_SOURCE_DIR}/src/modular-glsl.cpp
   )
 
 

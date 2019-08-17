@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o"
+  "CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o"
   "../lib/libmodular-glsl.pdb"
   "../lib/libmodular-glsl.a"
 )

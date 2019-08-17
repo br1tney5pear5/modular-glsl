@@ -136,32 +136,32 @@ test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-src/ShaderBuilder.o: src/ShaderBuilder.cpp.o
+src/modular-glsl.o: src/modular-glsl.cpp.o
 
-.PHONY : src/ShaderBuilder.o
+.PHONY : src/modular-glsl.o
 
 # target to build an object file
-src/ShaderBuilder.cpp.o:
-	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o
-.PHONY : src/ShaderBuilder.cpp.o
+src/modular-glsl.cpp.o:
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o
+.PHONY : src/modular-glsl.cpp.o
 
-src/ShaderBuilder.i: src/ShaderBuilder.cpp.i
+src/modular-glsl.i: src/modular-glsl.cpp.i
 
-.PHONY : src/ShaderBuilder.i
+.PHONY : src/modular-glsl.i
 
 # target to preprocess a source file
-src/ShaderBuilder.cpp.i:
-	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.i
-.PHONY : src/ShaderBuilder.cpp.i
+src/modular-glsl.cpp.i:
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.i
+.PHONY : src/modular-glsl.cpp.i
 
-src/ShaderBuilder.s: src/ShaderBuilder.cpp.s
+src/modular-glsl.s: src/modular-glsl.cpp.s
 
-.PHONY : src/ShaderBuilder.s
+.PHONY : src/modular-glsl.s
 
 # target to generate assembly for a file
-src/ShaderBuilder.cpp.s:
-	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.s
-.PHONY : src/ShaderBuilder.cpp.s
+src/modular-glsl.cpp.s:
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.s
+.PHONY : src/modular-glsl.cpp.s
 
 test/test.o: test/test.cpp.o
 
@@ -200,9 +200,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... modular-glsl"
 	@echo "... test"
-	@echo "... src/ShaderBuilder.o"
-	@echo "... src/ShaderBuilder.i"
-	@echo "... src/ShaderBuilder.s"
+	@echo "... src/modular-glsl.o"
+	@echo "... src/modular-glsl.i"
+	@echo "... src/modular-glsl.s"
 	@echo "... test/test.o"
 	@echo "... test/test.i"
 	@echo "... test/test.s"

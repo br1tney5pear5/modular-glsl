@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/shared/projects/modular-glsl/src/ShaderBuilder.cpp
-ShaderBuilder.h
-/shared/projects/modular-glsl/src/ShaderBuilder.h
+/shared/projects/modular-glsl/src/modular-glsl.cpp
+modular-glsl.h
+/shared/projects/modular-glsl/src/modular-glsl.h
 regex
 -
 tuple
@@ -20,7 +20,7 @@ map
 string
 -
 
-/shared/projects/modular-glsl/src/ShaderBuilder.h
+/shared/projects/modular-glsl/src/modular-glsl.h
 string
 -
 vector

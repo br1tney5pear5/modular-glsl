@@ -1,4 +1,4 @@
-#include "ShaderBuilder.h"
+#include "modular-glsl.h"
 #include <thread>
 #include <fstream>
 

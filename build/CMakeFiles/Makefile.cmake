@@ -11,7 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.13.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.13.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.13.1/CMakeSystem.cmake"
-  "../src/ShaderBuilder.h"
+  "../src/modular-glsl.h"
   "/usr/share/cmake-3.13/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCommonLanguageInclude.cmake"
@@ -39,7 +39,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "../include/ShaderBuilder.h"
+  "../include/modular-glsl.h"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

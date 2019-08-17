@@ -3,7 +3,7 @@
 
 #include <fstream>
 
-#include "ShaderBuilder.h"
+#include "modular-glsl.h"
 
 TEST_CASE( "Include directories manipulation" ) {
     ShaderBuilder builder;

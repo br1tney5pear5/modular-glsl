@@ -57,27 +57,27 @@ include CMakeFiles/modular-glsl.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/modular-glsl.dir/flags.make
 
-CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o: CMakeFiles/modular-glsl.dir/flags.make
-CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o: ../src/ShaderBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o -c /shared/projects/modular-glsl/src/ShaderBuilder.cpp
+CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o: CMakeFiles/modular-glsl.dir/flags.make
+CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o: ../src/modular-glsl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o -c /shared/projects/modular-glsl/src/modular-glsl.cpp
 
-CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /shared/projects/modular-glsl/src/ShaderBuilder.cpp > CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.i
+CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /shared/projects/modular-glsl/src/modular-glsl.cpp > CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.i
 
-CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /shared/projects/modular-glsl/src/ShaderBuilder.cpp -o CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.s
+CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /shared/projects/modular-glsl/src/modular-glsl.cpp -o CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.s
 
 # Object files for target modular-glsl
 modular__glsl_OBJECTS = \
-"CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o"
+"CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o"
 
 # External object files for target modular-glsl
 modular__glsl_EXTERNAL_OBJECTS =
 
-../lib/libmodular-glsl.a: CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o
+../lib/libmodular-glsl.a: CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o
 ../lib/libmodular-glsl.a: CMakeFiles/modular-glsl.dir/build.make
 ../lib/libmodular-glsl.a: CMakeFiles/modular-glsl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../lib/libmodular-glsl.a"

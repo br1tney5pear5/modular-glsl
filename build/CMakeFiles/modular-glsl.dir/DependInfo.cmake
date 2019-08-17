@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/shared/projects/modular-glsl/src/ShaderBuilder.cpp" "/shared/projects/modular-glsl/build/CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o"
+  "/shared/projects/modular-glsl/src/modular-glsl.cpp" "/shared/projects/modular-glsl/build/CMakeFiles/modular-glsl.dir/src/modular-glsl.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
