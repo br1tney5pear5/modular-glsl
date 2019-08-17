@@ -38,8 +38,8 @@ uniform float u_time;
 #modules "structs"
 
 struct Sphere {
-  vec3 position;
-  float radius;
+    vec3 position;
+    float radius;
 }
 
 ```
@@ -60,7 +60,7 @@ float rand(vec2 seed) {
 #uses "structs"
 
 vec3 random_sphere(vec3 position, vec2 seed) {
-  return Sphere(pos, rand(seed));
+    return Sphere(pos, rand(seed));
 }
 ```
 
@@ -72,21 +72,22 @@ ShaderBuilder builder;
 ```
 Secondly you need to let ShaderBuilder know where it should look for your modules by specifying include directories.
 ```c++
-builder.add_include_dir("../src/glsl/");
-builder.add_include_dir("../res/shaders/");
+//main.cpp
+	builder.add_include_dir("../src/glsl/");
+	builder.add_include_dir("../res/shaders/");
 // ...
 ```
 Finally you can add your modules.
 ```c++
 //main.cpp
-add_module("module0.glsl");
-add_module("module1.frag");
-add_module("module2.geom");
+	add_module("module0.glsl");
+	add_module("module1.frag");
+	add_module("module2.geom");
 // ...
 
 // or
 
-add_modules({"module0.glsl", "module1.frag", "module2.geom" /*...*/})
+	add_modules({"module0.glsl", "module1.frag", "module2.geom" /*...*/})
 ```
 
 alternatively you can keep record of your modules in separate file and import it...
@@ -110,7 +111,7 @@ Keep in mind that order in which you add your modules does not matter, ShaderBui
 Also if you add module and it is not used by build root module or any of it's dependencies it's not going to be included in the final shader(s).
 
 ## Building
-To build your shader just call build method, specifying the root module.
+To build your shader just call build method, specifying a root module.
 ```C++
 std::string vert_source = builder.build("mainvert");
 std::string frag_source = builder.build("mainfrag");
@@ -184,7 +185,7 @@ Although this library is not the most talkative, it can provide some helpful mes
 builder.register_log_function(log);
 
 void log(std::string msg) {
-    std::cout << msg << '\n';
+	std::cout << msg << '\n';
 }
 
 // ...somewhere later
@@ -202,9 +203,6 @@ Because shader building errors - like shader compilation errors - are not except
 // Example usage
 std::error_code ec;
 builder.add_module("invalid_module.glsl", ec)
-if(ec) {
-log(ec.message());
-
-}
+if(ec) log(ec.message());
 ```
 (Note that not using exceptions is not motivated by fact that this library can be used for games or other graphical performance applications because it should not be. It's rather a development time tool that lets you easly and elegantly deal with shaders. Especially at this early stage of this library, once finished - shader(s) ought to be build and included in one piece in whatever you are developing, and this code should not make it's way to any release build.)
