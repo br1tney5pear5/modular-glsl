@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named modular-glsl.a
+# Target rules for targets named modular-glsl
 
 # Build rule for target.
-modular-glsl.a: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 modular-glsl.a
-.PHONY : modular-glsl.a
+modular-glsl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 modular-glsl
+.PHONY : modular-glsl
 
 # fast build rule for target.
-modular-glsl.a/fast:
-	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/build
-.PHONY : modular-glsl.a/fast
+modular-glsl/fast:
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/build
+.PHONY : modular-glsl/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -142,7 +142,7 @@ src/ShaderBuilder.o: src/ShaderBuilder.cpp.o
 
 # target to build an object file
 src/ShaderBuilder.cpp.o:
-	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/src/ShaderBuilder.cpp.o
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.o
 .PHONY : src/ShaderBuilder.cpp.o
 
 src/ShaderBuilder.i: src/ShaderBuilder.cpp.i
@@ -151,7 +151,7 @@ src/ShaderBuilder.i: src/ShaderBuilder.cpp.i
 
 # target to preprocess a source file
 src/ShaderBuilder.cpp.i:
-	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/src/ShaderBuilder.cpp.i
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.i
 .PHONY : src/ShaderBuilder.cpp.i
 
 src/ShaderBuilder.s: src/ShaderBuilder.cpp.s
@@ -160,7 +160,7 @@ src/ShaderBuilder.s: src/ShaderBuilder.cpp.s
 
 # target to generate assembly for a file
 src/ShaderBuilder.cpp.s:
-	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/src/ShaderBuilder.cpp.s
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/src/ShaderBuilder.cpp.s
 .PHONY : src/ShaderBuilder.cpp.s
 
 test/test.o: test/test.cpp.o
@@ -198,7 +198,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... modular-glsl.a"
+	@echo "... modular-glsl"
 	@echo "... test"
 	@echo "... src/ShaderBuilder.o"
 	@echo "... src/ShaderBuilder.i"

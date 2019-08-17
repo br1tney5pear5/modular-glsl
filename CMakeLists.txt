@@ -17,7 +17,7 @@ configure_file(
   ${CMAKE_SOURCE_DIR}/include/
   COPYONLY)
 
-add_library(modular-glsl.a STATIC
+add_library(modular-glsl STATIC
   ${CMAKE_SOURCE_DIR}/src/ShaderBuilder.h
   ${CMAKE_SOURCE_DIR}/src/ShaderBuilder.cpp
   )
@@ -25,4 +25,4 @@ add_library(modular-glsl.a STATIC
 
 add_executable(test ${CMAKE_SOURCE_DIR}/test/test.cpp )
 target_include_directories(test PUBLIC ${CMAKE_SOURCE_DIR}/include/)
-target_link_libraries(test modular-glsl.a stdc++fs )
+target_link_libraries(test modular-glsl stdc++fs )

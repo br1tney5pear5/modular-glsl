@@ -847,8 +847,8 @@ bool ShaderBuilder::hot_rebuild(const std::string root_module,
         if(ec) return false;
 
         if(module.last_write_time != newtime){
-            module.last_write_time = newtime;
             reload_module(module, ec);
+            module.last_write_time = newtime;
             any_dirty = true;
 
             if(ec) {
@@ -864,4 +864,3 @@ bool ShaderBuilder::hot_rebuild(const std::string root_module,
     return false;
 }
 #endif
-

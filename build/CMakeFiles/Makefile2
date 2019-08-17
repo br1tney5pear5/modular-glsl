@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /shared/projects/modular-glsl
 CMAKE_BINARY_DIR = /shared/projects/modular-glsl/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/modular-glsl.a.dir
+# Target rules for target CMakeFiles/modular-glsl.dir
 
 # All Build rule for target.
-CMakeFiles/modular-glsl.a.dir/all:
-	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/depend
-	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=1,2 "Built target modular-glsl.a"
-.PHONY : CMakeFiles/modular-glsl.a.dir/all
+CMakeFiles/modular-glsl.dir/all:
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/depend
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=1,2 "Built target modular-glsl"
+.PHONY : CMakeFiles/modular-glsl.dir/all
 
 # Include target in all.
-all: CMakeFiles/modular-glsl.a.dir/all
+all: CMakeFiles/modular-glsl.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/modular-glsl.a.dir/rule: cmake_check_build_system
+CMakeFiles/modular-glsl.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /shared/projects/modular-glsl/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/modular-glsl.a.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/modular-glsl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /shared/projects/modular-glsl/build/CMakeFiles 0
-.PHONY : CMakeFiles/modular-glsl.a.dir/rule
+.PHONY : CMakeFiles/modular-glsl.dir/rule
 
 # Convenience name for target.
-modular-glsl.a: CMakeFiles/modular-glsl.a.dir/rule
+modular-glsl: CMakeFiles/modular-glsl.dir/rule
 
-.PHONY : modular-glsl.a
-
-# clean rule for target.
-CMakeFiles/modular-glsl.a.dir/clean:
-	$(MAKE) -f CMakeFiles/modular-glsl.a.dir/build.make CMakeFiles/modular-glsl.a.dir/clean
-.PHONY : CMakeFiles/modular-glsl.a.dir/clean
+.PHONY : modular-glsl
 
 # clean rule for target.
-clean: CMakeFiles/modular-glsl.a.dir/clean
+CMakeFiles/modular-glsl.dir/clean:
+	$(MAKE) -f CMakeFiles/modular-glsl.dir/build.make CMakeFiles/modular-glsl.dir/clean
+.PHONY : CMakeFiles/modular-glsl.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/modular-glsl.dir/clean
 
 .PHONY : clean
 
@@ -105,7 +105,7 @@ clean: CMakeFiles/modular-glsl.a.dir/clean
 # Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all: CMakeFiles/modular-glsl.a.dir/all
+CMakeFiles/test.dir/all: CMakeFiles/modular-glsl.dir/all
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/shared/projects/modular-glsl/build/CMakeFiles --progress-num=3,4 "Built target test"

@@ -45,6 +45,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/modular-glsl.a.dir/DependInfo.cmake"
+  "CMakeFiles/modular-glsl.dir/DependInfo.cmake"
   "CMakeFiles/test.dir/DependInfo.cmake"
   )

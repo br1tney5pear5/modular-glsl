@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/shared/projects/modular-glsl/src/ShaderBuilder.cpp
+ShaderBuilder.h
+/shared/projects/modular-glsl/src/ShaderBuilder.h
+regex
+-
+tuple
+-
+fstream
+-
+map
+-
+string
+-
+
+/shared/projects/modular-glsl/src/ShaderBuilder.h
+string
+-
+vector
+-
+optional
+-
+iostream
+-
+system_error
+-
+filesystem
+-
+functional
+-
+

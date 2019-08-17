@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/test.dir/test/test.cpp.o  -o ../bin/test ../lib/libmodular-glsl.a.a -lstdc++fs 
+/usr/bin/c++     CMakeFiles/test.dir/test/test.cpp.o  -o ../bin/test ../lib/libmodular-glsl.a -lstdc++fs 
