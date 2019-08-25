@@ -180,6 +180,7 @@ builder.set_header(
 ```
 ## Logging
 > requires SHADER_BUILDER_LOGGING
+
 Although this library is not the most talkative, it can provide some helpful messages. To enable them register log function and use your logging solution of choice to put messages on the screen.
 ```c++
 builder.register_log_function(log);
