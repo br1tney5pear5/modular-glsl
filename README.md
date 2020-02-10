@@ -206,4 +206,3 @@ std::error_code ec;
 builder.add_module("invalid_module.glsl", ec)
 if(ec) log(ec.message());
 ```
-(Note that not using exceptions is not motivated by fact that this library can be used for games or other graphical performance applications because it should not be. It's rather a development time tool that lets you easly and elegantly deal with shaders. Especially at this early stage of this library, once finished - shader(s) ought to be build and included in one piece in whatever you are developing, and this code should not make it's way to any release build.)
