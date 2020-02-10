@@ -1,3 +1,4 @@
+**DEPRECATED, new version:** https://github.com/kcpikkt/mglsl
 # Introduction
 Modular-glsl is a handy extension to the OpenGL Shading Language, that allows for writing shaders in more modular, structured way, with functionality separated into different files, without worrying about assembling them later into your final shader. It also makes it trivial to implement hot rebuild in case of using live shader development tools like [glslViewer](https://github.com/patriciogonzalezvivo/glslViewer).
 
